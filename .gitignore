@@ -4,9 +4,5 @@ src/rnnoise_data_little.c
 src/rnnoise_data_little.h
 src/rnnoise_data.h
 src/rnnoise_data.c
-CMakeUserPresets.json
 .vscode/
 .DS_Store
-sample_audios/
-evaluation_output/
-rnnoise_env/
