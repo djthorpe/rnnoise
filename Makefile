@@ -1,5 +1,6 @@
 ROOT_PATH := $(CURDIR)
 BUILD_DIR := build
+DOWNLOADS_DIR := downloads
 
 # Targets
 all: rnnoise
@@ -11,7 +12,7 @@ rnnoise: mkdir
 
 rnnoise-examples: rnnoise
 	@echo "Building rnnoise examples"
-	cmake -B build -DRNNOISE_COMPILE_DEMO=Y && cd build && make -j$(nproc)
+	cmake -B build -DRNNOISE_COMPILE_DEMO=ON && cd build && make -j$(nproc)
 
 # Make build directory
 mkdir:
@@ -22,3 +23,5 @@ mkdir:
 clean: 
 	@echo "Cleaning"
 	@rm -rf ${BUILD_DIR}
+	@rm -rf ${DOWNLOADS_DIR}
+
